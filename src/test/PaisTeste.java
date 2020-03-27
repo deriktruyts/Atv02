@@ -11,13 +11,13 @@ public class PaisTeste {
 		int menu;
 
 		String menuTxt = "MENU\n" +
-						 "1- Adicionar país;\n" +
-						 "2- Remover país;\n" +
-						 "3- Carregar país\n" +
-						 "4- Alterar País\n" +
-						 "5- Carregar país com a maior população\n" +
-						 "6- Carregar país com a menor área\n" +
-						 "7- Carregar 3 países\n" +
+						 "1- Adicionar paÃ­s;\n" +
+						 "2- Remover paÃ­s;\n" +
+						 "3- Carregar paÃ­s\n" +
+						 "4- Alterar PaÃ­s\n" +
+						 "5- Carregar paÃ­s com a maior populaÃ§Ã£o\n" +
+						 "6- Carregar paÃ­s com a menor Ã¡rea\n" +
+						 "7- Carregar 3 paÃ­ses\n" +
 						 "8- Sair";
 
 		PaisService ps = new PaisService();
@@ -29,24 +29,24 @@ public class PaisTeste {
 			else if (menu == 1) {
 				Pais pais = new Pais(
 							0,
-							JOptionPane.showInputDialog("Digite o nome do país"),
-							Long.parseLong(JOptionPane.showInputDialog("Digite a população do país")),
-							Double.parseDouble(JOptionPane.showInputDialog("Digite a área do país"))
+							JOptionPane.showInputDialog("Digite o nome do paÃ­s"),
+							Long.parseLong(JOptionPane.showInputDialog("Digite a populaÃ§Ã£o do paÃ­s")),
+							Double.parseDouble(JOptionPane.showInputDialog("Digite a Ã¡rea do paÃ­s"))
 						);
 				ps.incluir(pais);
 			}
 			else if (menu == 2) {
-				ps.excluir(Integer.parseInt(JOptionPane.showInputDialog("Insira o ID do país para excluir")));
+				ps.excluir(Integer.parseInt(JOptionPane.showInputDialog("Insira o ID do paÃ­s para excluir")));
 			}
 			else if (menu == 3) {
-				JOptionPane.showMessageDialog(null, ps.carregar(Integer.parseInt(JOptionPane.showInputDialog("Insira o ID do país para carregar"))));
+				JOptionPane.showMessageDialog(null, ps.carregar(Integer.parseInt(JOptionPane.showInputDialog("Insira o ID do paÃ­s para carregar"))));
 			}
 			else if (menu == 4) {
 				Pais pais = new Pais(
-						Integer.parseInt(JOptionPane.showInputDialog("Insira o ID do país que deseja atualizar os dados")),
-						JOptionPane.showInputDialog("Digite o nome do país"),
-						Long.parseLong(JOptionPane.showInputDialog("Digite a população do país")),
-						Double.parseDouble(JOptionPane.showInputDialog("Digite a área do país"))
+						Integer.parseInt(JOptionPane.showInputDialog("Insira o ID do paÃ­s que deseja atualizar os dados")),
+						JOptionPane.showInputDialog("Digite o nome do paÃ­s"),
+						Long.parseLong(JOptionPane.showInputDialog("Digite a populaÃ§Ã£o do paÃ­s")),
+						Double.parseDouble(JOptionPane.showInputDialog("Digite a Ã¡rea do paÃ­s"))
 					);
 			ps.atualizar(pais);
 			}
